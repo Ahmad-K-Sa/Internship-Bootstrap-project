@@ -1,0 +1,263 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
+}
+
+/* header */
+
+header {
+  height: 100vh;
+  width:100vw;
+  background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .7)), url(images/header-img.jpg) no-repeat center center /cover;
+}
+
+/* navbar */
+.nav-menu {
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4));
+  padding: 10px;
+  transition: all .7s;
+}
+
+.menu-item {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #eaeaea;
+  transition: color .5s;
+}
+
+.menu-item:hover {
+  color: #007bff;
+}
+
+.active{
+  color: #1b7fbd;
+}
+.line1, .line2, .line3 {
+  width: 23px;
+  height: 3px;
+  margin: 5px;
+  transition: all .4s;
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.custom-navbar {
+  padding: 5px 30px;
+  background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .7));
+  max-width: 100%;
+}
+/* end of navbar */
+
+
+/* banner */
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.banner-heading {
+  animation-name: anim;
+  animation-duration: 2s;
+}
+
+.banner-par {
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-delay: .5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* contact */
+.contact {
+  width: 100%;
+  background: linear-gradient(105deg,
+   rgba(21, 31, 32, 1) 0%,
+   rgba(21, 31, 32, .95) 51%,
+   transparent 90%),
+   url(images/form-img.jpeg) center center no-repeat /cover;
+}
+.contact-1{
+  width: 100%;
+  background: linear-gradient(65.7deg,
+   rgba(21, 31, 32, 1) 0%,
+   rgba(21, 31, 32, .95) 50%,
+   transparent 90%),
+   url(images/form-img.jpeg) center center no-repeat /cover;
+}
+.input {
+  background: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  transition: all .8s;
+}
+
+.input:focus {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #fff;
+  border-bottom: 2px solid #f5593d;
+}
+
+.submit-button {
+  background: #f5593d;
+  color: #eee;
+  transition: all .3s;
+}
+
+.submit-button:hover {
+  background: #f9793d;
+  transform: translateY(-3px);
+}
+
+.label {
+  color: #777;
+  display: block;
+  margin-top: -70px;
+  margin-left: 4px;
+  font-size: 13px;
+  transition: all .3s;
+}
+
+.input:placeholder-shown + .label {
+  transform: translate(20px, 20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 992px) {
+  .contact {
+    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
+  }
+  .contact-1 {
+    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
+  }
+  .contact-form {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media(max-width: 500px){
+  .banner-heading{
+    padding-top: 30vh;
+    }
+}
+/* @media(max-width: 768px){
+  header{
+    padding-top: 25vh;
+    height: 160%;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(255,255,255,.4)), url(images/img.jpg) no-repeat center center /cover;
+  }
+} */
+/* end of contact */
+.card-big{
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(255,255,255,.4)), url(images/abstract.jpg) no-repeat center center /cover;
+}
+.card-button {
+  background: #f5593d;
+  width: 130px;
+  border-radius: 25px;
+  box-shadow: 3px 5px 10px #000;
+  transition: all .2s;
+}
+
+.card-button:hover {
+  background: #f9793d;
+  transform: translateY(-2px);
+}
+#Benefits{
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(255,255,255,.4)), url(images/img.jpg) no-repeat center center /cover;
+    width: 100%;
+}
+.card-li{
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255,255,255,0));
+  border-style: none;
+}
+.card-list-item{
+  border-bottom: 1px groove #eee;
+  width: 55%;
+  margin: auto;
+}
+.fromLeft{
+  animation-name: moveFromLeft;
+  animation-duration: 1s;
+}
+.fromRight{
+  animation-name: moveFromRight;
+  animation-duration: 1s;
+}
+.moveFromLeft {
+  animation-name: moveFromLeft;
+  animation-duration: 2s;
+}
+.moveFromRight {
+  animation-name: moveFromRight;
+  animation-duration: 2s;
+}
+.moveFromBottom {
+  animation-name: moveFromBottom;
+  animation-duration: 2s;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*  end of cards */
+.underline {
+  width: 150px;
+  border: 3px solid #eee;
+  margin: auto;
+}
